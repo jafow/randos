@@ -22,11 +22,9 @@ int main ()
 {
     int animals = 0;
     int cash = 100;
-    int i = 0;
     int h = 0;
     int p = 0;
     float r = 0;
-    char stock[] = { 'h', 'p', 'r' };
 
     while (true) {
         if (animals == 100 && cash == 0) {
@@ -35,13 +33,6 @@ int main ()
         }
 
         
-
-        i++;
     }
     return 0;
-        /* } */
-
-    /* } */
-    
-    /* return 0; */
 }
