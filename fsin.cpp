@@ -9,21 +9,32 @@ int main(int argc, const char *argv[])
     char f_name[30], l_name[30];
     int age;
     char file_name[20];
+    int cont;
     
-    cout << "Enter First Name: ";
-    cin >> f_name;
-    
-    cout << "Enter Last Name: ";
-    cin >> l_name;
+    while(true) {
 
-    cout << "Enter age: ";
-    cin >> age;
+        cout << "Want to make a file? Type 0 for NO, 1 for YES" << endl;
+        cin >> cont;
 
-    cout << "Enter file name " << endl;
-    cin >> file_name;
-    // Create ofstream to write output
-    ofstream People(file_name, ios::out);
+        if (cont == 0) {
+            cout << "Stopping this madness " << endl;
+            return 0;
+        }
 
-    People << f_name << endl << l_name << endl << age << endl;
+        cout << "Enter First Name: ";
+        cin >> f_name;
+        
+        cout << "Enter Last Name: ";
+        cin >> l_name;
+
+        cout << "Enter age: ";
+        cin >> age;
+
+        cout << "Enter file name " << endl;
+        cin >> file_name;
+        ofstream People(file_name, ios::out);
+
+        People << f_name << endl << l_name << endl << age << endl;
+    }
     return 0;
 }
