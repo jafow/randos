@@ -13,7 +13,7 @@ int main() {
     int guess;
 
     srand (time(NULL));
-    /* cout << "my random int is " << secret_num << endl; */
+
     secret_num = rand() % 100; 
     guess = 11;
     handle_guess(guess, secret_num);
